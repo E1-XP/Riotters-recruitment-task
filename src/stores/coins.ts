@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 
-const FUNCTIONS_URL = `${window.location.origin}/.netlify/functions/get-coins`;
+const FUNCTIONS_URL = `${window.location.origin}/.netlify/functions/getCoins`;
 
 export const useCoinStore = defineStore("coinStore", {
   state: () => ({
