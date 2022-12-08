@@ -8,10 +8,14 @@ export const useCoinStore = defineStore("coinStore", {
   }),
   actions: {
     async getData() {
-      const response = await fetch(FUNCTIONS_URL);
-      const data: any = await response.json();
+      try {
+        const response = await fetch(FUNCTIONS_URL);
+        const data: any = await response.json();
 
-      console.log(data);
+        console.log(data);
+      } catch (err) {
+        console.log(err);
+      }
     },
   },
 });

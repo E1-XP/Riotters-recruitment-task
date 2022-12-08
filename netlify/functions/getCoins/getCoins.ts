@@ -1,3 +1,4 @@
+import fetch from "node-fetch";
 import { Handler } from "@netlify/functions";
 
 export const handler: Handler = async (event, context) => {
@@ -9,16 +10,23 @@ export const handler: Handler = async (event, context) => {
     return {
       statusCode: 500,
       body: JSON.stringify({
-        message: `Envs not found!`,
+        error: `Envs not found!`,
       }),
     };
   } else {
-    const response = await fetch(process.env.VITE_API_URL, { headers });
-    const data: any = await response.json();
+    try {
+      const response = await fetch(process.env.VITE_API_URL, { headers });
+      const data: any = await response.json();
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify(data),
-    };
+      return {
+        statusCode: 200,
+        body: JSON.stringify(data),
+      };
+    } catch (error) {
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error }),
+      };
+    }
   }
 };
