@@ -3,7 +3,7 @@ import Card from "@/components/Card.vue";
 </script>
 
 <template>
-  <Card heading="Summary"></Card>
+  <Card heading="Summary" withMenuBtn></Card>
 </template>
 
 <style lang="scss" scoped>
