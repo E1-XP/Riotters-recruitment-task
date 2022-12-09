@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 
-import "./assets/_main.scss";
+import "@/../node_modules/normalize-scss/sass/normalize/_import-now.scss";
 
 import App from "./App.vue";
 
