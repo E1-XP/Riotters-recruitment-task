@@ -10,10 +10,4 @@ getData();
   <div class="wrapper"></div>
 </template>
 
-<style scoped lang="scss">
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-  background-color: brown;
-}
-</style>
+<style scoped lang="scss"></style>
