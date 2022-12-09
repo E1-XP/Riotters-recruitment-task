@@ -1,3 +1,30 @@
+html {
+  font-size: 87.5%;
+  height: 100%;
+
+  @include bp($bp-large) {
+    font-size: 75%;
+  }
+
+  @include bp($bp-very-small) {
+    font-size: 68.8%;
+  }
+}
+
 body {
-    background-color: $background-primary;
+  height: 100%;
+  background-color: $background-primary;
+}
+
+.app {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 8fr;
+  gap: $grid-gutter;
+  padding: $grid-gutter;
+
+  @include bp($bp-medium) {
+    gap: $grid-gutter-small;
+    padding: $grid-gutter-small;
+  }
 }

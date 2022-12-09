@@ -1,9 +1,21 @@
-$background-primary:#FFFFFF;
-$background-secondary:#F7F7F9;
+//COLORS
+$background-primary: #ffffff;
+$background-secondary: #f7f7f9;
 
-$accent:#7445FB;
-$accent-danger:#EA4D4D;
-$accent-success:#2DC78F;
+$accent: #7445fb;
+$accent-danger: #ea4d4d;
+$accent-success: #2dc78f;
 
-$text-primary:#0A041C;
-$text-secondary:#9896A1;
+$text-primary: #0a041c;
+$text-secondary: #9896a1;
+
+//DIMENSIONS
+$grid-gutter: 4.857rem;
+$grid-gutter-small: 1.857rem;
+
+// BREAKPOINTS
+$bp-very-large: 100em; // 1600px
+$bp-large: 75em; // 1200px
+$bp-medium: 62.5em; // 1000px;
+$bp-small: 43.75em; //700px;
+$bp-very-small: 31.25em; // 500px;
