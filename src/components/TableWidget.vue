@@ -2,13 +2,29 @@
 import { Tabs, Tab } from "vue3-tabs-component";
 
 import Card from "@/components/Card.vue";
+import Button from "@/components/Button.vue";
+import { useCoinStore } from "@/stores/coins";
+
+const { coinData } = useCoinStore();
 </script>
 
 <template>
   <Card class="card--fullwidth">
     <div class="table-widget">
       <tabs nav-class="tab" nav-item-link-class="tab__item">
-        <tab name="Summary"> Summary </tab>
+        <tab name="Summary">
+          <ul class="summary-list">
+            <li v-for="(item, index) in coinData" class="summary-list__item">
+              <article class="product-info">
+                {{ item.symbol }} - {{ item.name }}
+                <section class="product-info__controls">
+                  <Button alt value="Sell" />
+                  <Button value="Buy" />
+                </section>
+              </article>
+            </li>
+          </ul>
+        </tab>
         <tab name="Table"> </tab>
         <tab name="Charts"> </tab>
         <tab name="Reporting"> </tab>
@@ -49,6 +65,27 @@ import Card from "@/components/Card.vue";
     color: $text-primary;
     border-bottom: 4px solid $accent;
     font-weight: 500;
+  }
+}
+
+.summary-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.571rem;
+}
+.product-info {
+  background-color: $background-primary;
+  border: 1px solid $background-tertiary;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.428rem;
+
+  &__controls {
+    & button:first-child {
+      margin-right: 0.571rem;
+    }
   }
 }
 </style>
