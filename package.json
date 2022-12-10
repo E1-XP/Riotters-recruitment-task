@@ -16,7 +16,8 @@
     "node-fetch": "^3.3.0",
     "normalize-scss": "^7.0.1",
     "pinia": "^2.0.26",
-    "vue": "^3.2.45"
+    "vue": "^3.2.45",
+    "vue3-tabs-component": "^1.1.2"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",

@@ -5,7 +5,7 @@ import Button from "@/components/button.vue";
 
 <template>
   <Card heading="Current Balance" withMenuBtn>
-    <section class="balance-widget">
+    <div class="balance-widget">
       <h3 class="balance-widget__jumbotron"><span>$</span>21 432.23</h3>
       <p class="balance-widget__info-paragraph info-paragraph">
         <span class="info-paragraph__icon">
@@ -28,7 +28,7 @@ import Button from "@/components/button.vue";
         <Button value="Quick Invest" />
         <Button value="Show Report" alt />
       </div>
-    </section>
+    </div>
   </Card>
 </template>
 
