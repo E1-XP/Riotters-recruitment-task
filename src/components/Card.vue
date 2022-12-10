@@ -45,9 +45,7 @@ defineProps<{
         </span>
       </button>
     </header>
-    <section class="card__content">
-      <slot></slot>
-    </section>
+    <slot></slot>
   </section>
 </template>
 

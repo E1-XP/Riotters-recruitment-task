@@ -18,6 +18,7 @@ import TableWidget from "@/components/TableWidget.vue";
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content;
   gap: $grid-gutter;
 
   @include bp($bp-medium) {
