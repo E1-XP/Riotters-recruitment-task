@@ -18,6 +18,8 @@ body {
 
 .app {
   height: 100%;
+  max-width: 102.857rem;
+  margin: 0 auto;
   display: grid;
   grid-template-rows: 1fr 8fr;
   gap: $grid-gutter;
