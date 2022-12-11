@@ -73,6 +73,14 @@ defineProps<{
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $background-tertiary;
+  }
 
   &__icon {
     display: flex;

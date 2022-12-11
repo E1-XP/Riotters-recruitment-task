@@ -145,6 +145,11 @@
   justify-content: center;
   cursor: pointer;
   position: relative;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $background-tertiary;
+  }
 
   &--notification::after {
     content: "";
