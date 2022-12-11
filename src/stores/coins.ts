@@ -1,18 +1,24 @@
 import { defineStore } from "pinia";
 
+import type { ResponseData, Data } from "./interfaces";
+
 const FUNCTIONS_URL = `${window.location.origin}/.netlify/functions/getCoins`;
 
-export const useCoinStore = defineStore("coinStore", {
+export const useCoinStore = defineStore("coin", {
   state: () => ({
-    data: [],
+    coinData: [] as Data[],
   }),
   actions: {
     async getData() {
       try {
         const response = await fetch(FUNCTIONS_URL);
-        const data: any = await response.json();
+        const data: ResponseData = await response.json();
 
-        console.log(data);
+        this.coinData = data.data.sort(
+          (a, b) => b.quote.USD.price - a.quote.USD.price
+        );
+
+        console.log(this.coinData);
       } catch (err) {
         console.log(err);
       }
