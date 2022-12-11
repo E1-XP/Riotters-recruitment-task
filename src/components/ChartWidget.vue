@@ -56,7 +56,6 @@ const chartOptions = {
   },
   scales: {
     y: {
-      // display: false,
       ticks: {
         callback: function (value: number) {
           return `${value / 1000}${value ? "k" : ""}`;
@@ -114,7 +113,6 @@ const chartOptions = {
 }
 
 .chart {
-  width: 31.071rem;
   height: 13.5rem;
 }
 

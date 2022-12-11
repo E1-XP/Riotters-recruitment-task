@@ -17,8 +17,6 @@ export const useCoinStore = defineStore("coin", {
         this.coinData = data.data.sort(
           (a, b) => b.quote.USD.price - a.quote.USD.price
         );
-
-        console.log(this.coinData);
       } catch (err) {
         console.log(err);
       }
