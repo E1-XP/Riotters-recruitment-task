@@ -28,4 +28,9 @@ body {
     gap: $grid-gutter-small;
     padding: $grid-gutter-small;
   }
+
+  @include bp($bp-very-small) {
+    column-gap: $grid-gutter-v-small;
+    padding: $grid-gutter-small $grid-gutter-v-small;
+  }
 }

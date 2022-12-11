@@ -34,11 +34,15 @@ import Button from "@/components/Button.vue";
 
 <style lang="scss" scoped>
 .balance-widget {
-  padding: 2.286rem;
+  padding: $grid-gutter;
   padding-top: 0.571rem;
   display: flex;
   flex-direction: column;
   height: calc(24rem - 6.28rem);
+
+  @include bp($bp-very-small) {
+    padding: $grid-gutter-v-small;
+  }
 
   &__jumbotron {
     font-size: 4rem;

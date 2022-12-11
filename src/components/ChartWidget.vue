@@ -110,6 +110,10 @@ const chartOptions = {
   justify-content: space-between;
   flex-direction: column;
   height: 17.72rem;
+
+  @include bp($bp-very-small) {
+    padding: 0 $grid-gutter-v-small;
+  }
 }
 
 .chart {

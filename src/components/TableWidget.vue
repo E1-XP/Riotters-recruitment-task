@@ -240,10 +240,14 @@ export default {
 <style lang="scss" scoped>
 .card--fullwidth {
   grid-column: 1/3;
-  padding: 2.286rem;
+  padding: $grid-gutter;
 
   @include bp($bp-small) {
     grid-column: initial;
+  }
+
+  @include bp($bp-very-small) {
+    padding: $grid-gutter-v-small;
   }
 }
 
@@ -286,6 +290,10 @@ export default {
   justify-content: space-between;
   padding: 1.078rem;
 
+  @include bp($bp-very-small) {
+    padding: $grid-gutter-v-small;
+  }
+
   &__section {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -293,6 +301,14 @@ export default {
     &--multi {
       grid-template-columns: min-content 1fr;
       min-width: 11.74rem;
+    }
+
+    &:not(&--multi) {
+      svg {
+        @include bp($bp-small) {
+          display: none;
+        }
+      }
     }
   }
 
@@ -307,6 +323,12 @@ export default {
     border-radius: 50%;
     grid-row: 1/3;
     margin-right: 1.1428rem;
+
+    @include bp($bp-very-small) {
+      height: 2rem;
+      width: 2rem;
+      align-self: center;
+    }
   }
 
   &__text {
@@ -329,6 +351,10 @@ export default {
   &__chart {
     width: 10.571rem;
     height: 2.286rem;
+
+    @include bp($bp-small) {
+      display: none;
+    }
   }
 
   &__controls {
