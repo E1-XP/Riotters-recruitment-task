@@ -1,6 +1,6 @@
 html {
   font-size: 87.5%;
-  height: 100%;
+  height: min-content;
 
   @include bp($bp-large) {
     font-size: 75%;
@@ -21,9 +21,8 @@ body {
   max-width: 102.857rem;
   margin: 0 auto;
   display: grid;
-  grid-template-rows: 1fr 8fr;
   gap: $grid-gutter;
-  padding: $grid-gutter;
+  padding: 3.5rem $grid-gutter;
 
   @include bp($bp-medium) {
     gap: $grid-gutter-small;

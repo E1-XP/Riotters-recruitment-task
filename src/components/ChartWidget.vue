@@ -98,7 +98,7 @@ const chartOptions = {
 
 <style lang="scss" scoped>
 .card {
-  @include bp($bp-medium) {
+  @include bp($bp-small) {
     order: 1;
   }
 }

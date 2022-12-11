@@ -242,7 +242,7 @@ export default {
   grid-column: 1/3;
   padding: 2.286rem;
 
-  @include bp($bp-medium) {
+  @include bp($bp-small) {
     grid-column: initial;
   }
 }
