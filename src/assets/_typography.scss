@@ -4,6 +4,14 @@ body {
   color: $text-primary;
 }
 
+.t-text-success {
+  color: $accent-success !important;
+}
+
+.t-text-danger {
+  color: $accent-danger !important;
+}
+
 @mixin heading {
   font-size: 1.429rem;
   font-weight: 500;
