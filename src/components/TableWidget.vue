@@ -14,7 +14,6 @@ import Card from "@/components/Card.vue";
 import Button from "@/components/Button.vue";
 
 import { useCoinStore } from "@/stores/coins";
-import { Data } from "@stores/interfaces";
 
 // options api used here as workaround to enable crypto icons
 export default {

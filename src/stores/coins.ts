@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 
-import type { ResponseData, Data } from "./interfaces";
+import { ResponseData, Data } from "./interfaces";
 
 const FUNCTIONS_URL = `${window.location.origin}/.netlify/functions/getCoins`;
 
