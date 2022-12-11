@@ -17,7 +17,7 @@ import TableWidget from "@/components/TableWidget.vue";
 <style lang="scss" scoped>
 .main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   grid-template-rows: max-content;
   gap: $grid-gutter;
 
